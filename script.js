@@ -47,3 +47,24 @@ function setMenu(open) {
 menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
 document.querySelectorAll('.mm-link').forEach(a => a.addEventListener('click', () => setMenu(false)));
 window.addEventListener('resize', () => { if (window.innerWidth >= 768) setMenu(false); });
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (e) {
+        // fallback if the clipboard API is blocked (e.g. file:// pages)
+        const t = document.createElement("textarea");
+        t.value = text;
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand("copy");
+        t.remove();
+      }
+      const original = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = original), 2000);
+    });
+  });
+});
