@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JUSBY LIM UTLANG | PORTFOLIO</title>
+<meta name="description" content="Portfolio of Jusby Lim Utlang, IT student and freelance web and software developer based in Bunawan, Agusan del Sur, Philippines.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23000'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23fff'%3EJU%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui','Segoe UI','Arial','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-black/80 backdrop-blur border-b border-white/10" style="padding-top:env(safe-area-inset-top,0px)">
+ <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 h-14">
+  <a href="#home" class="font-extrabold tracking-tight text-sm sm:text-base">JUSBY LIM UTLANG</a>
+
+  <!-- Desktop links -->
+  <div class="hidden md:flex gap-7 text-sm text-white/70">
+   <a class="hover:text-white" href="#about">About Me</a>
+   <a class="hover:text-white" href="#projects">My Projects</a>
+   <a class="hover:text-white" href="#skills">Skills &amp; Services</a>
+   <a class="hover:text-white" href="#cv">CV/Resume</a>
+   <a class="hover:text-white" href="#contact">Contact Me</a>
+  </div>
+
+  <div class="flex items-center gap-3">
+   <a href="#contact" class="hidden sm:inline-block text-sm bg-white text-black px-4 py-1.5 rounded-full font-medium hover:bg-white/80">HIRE ME</a>
+
+   <!-- Hamburger (mobile only) -->
+   <button id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+           class="md:hidden w-10 h-10 grid place-items-center rounded-full border border-white/20">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+   </button>
+  </div>
+ </nav>
+
+ <!-- Mobile menu -->
+ <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-black max-h-[calc(100vh-3.5rem)] overflow-y-auto">
+  <div class="px-5 py-4 flex flex-col text-white/80">
+   <a class="mm-link py-3 border-b border-white/10" href="#about">About Me</a>
+   <a class="mm-link py-3 border-b border-white/10" href="#projects">My Projects</a>
+   <a class="mm-link py-3 border-b border-white/10" href="#skills">Skills &amp; Services</a>
+   <a class="mm-link py-3 border-b border-white/10" href="#cv">CV/Resume</a>
+   <a class="mm-link py-3 border-b border-white/10" href="#contact">Contact Me</a>
+   <a class="mm-link mt-4 text-center bg-white text-black py-3 rounded-full font-medium" href="#contact">HIRE ME</a>
+  </div>
+ </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center pt-14">
+ <div class="max-w-6xl mx-auto px-5 py-16 md:py-20 grid md:grid-cols-5 gap-12 items-center w-full">
+
+  <!-- Left: text -->
+  <div class="md:col-span-3">
+   <p class="text-sm tracking-[.3em] uppercase text-white/50 mb-3">Portfolio</p>
+   <p class="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-1.5 text-xs text-white/70 mb-6">
+    <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+    <span id="clock">Loading Time…</span>
+   </p>
+   <h1 class="text-5xl sm:text-7xl font-extrabold leading-[1.05] tracking-tight">
+    <span class="rise d1">Jusby</span>
+    <span class="rise d2">Lim</span><br>
+    <span class="rise d3 text-white/40">Utlang</span>
+   </h1>
+   <p class="mt-7 text-lg text-white/70 max-w-xl text-left sm:text-justify">IT student and aspiring developer who builds clean, practical websites and software for real businesses. Based in the Philippines, open to client work.</p>
+   <div class="mt-9 flex flex-wrap gap-3">
+    <a href="#projects" class="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/80">View my Work</a>
+    <a href="#contact" class="border border-white/30 px-6 py-3 rounded-full font-medium hover:bg-white hover:text-black">Contact Me</a>
+   </div>
+  </div>
+
+  <!-- Right: photo card -->
+  <div class="md:col-span-2 w-full">
+   <div class="border border-white/15 rounded-2xl p-5 sm:p-7 bg-white/[.03] w-full max-w-sm mx-auto md:max-w-md">
+
+    <div class="w-full aspect-[4/5] rounded-xl overflow-hidden border border-white/15 bg-white">
+     <img src="FormalPhoto.png" alt="Jusby Lim Utlang in formal attire" class="w-full h-full object-cover object-top">
+    </div>
+
+    <dl class="mt-6 space-y-4 text-sm">
+     <div><dt class="text-white/40 uppercase tracking-widest text-xs">Focus</dt><dd>Web Development · Software Development</dd></div>
+     <div><dt class="text-white/40 uppercase tracking-widest text-xs">Status</dt><dd class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>Available for Projects / Commission</dd></div>
+     <div><dt class="text-white/40 uppercase tracking-widest text-xs">Gmail</dt><dd>jusbylim@gmail.com</dd></div>
+    </dl>
+
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<!-- ABOUT (white) -->
+<section id="about" class="bg-white text-black">
+ <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-5 gap-12">
+  <div class="md:col-span-2">
+   <p class="text-xs tracking-[.3em] uppercase text-black/50">About Me</p>
+   <h2 class="mt-3 text-3xl sm:text-4x1 font-extrabold tracking-tight">Building Things That People Actually Use</h2>
+  </div>
+  <div class="md:col-span-3 space-y-5 text-black/75 text-lg">
+   <p>I’m Jusby, an IT student who enjoys turning ideas into working software. I learn by building, from data structures in Python to a full website for a local printing business.</p>
+   <p>I care about clear design, readable code and communication that keeps clients in the loop from first message to final delivery.</p>
+   <div class="grid sm:grid-cols-3 gap-4 pt-4 text-base">
+    <div class="border border-black/15 rounded-xl p-4"><p class="font-semibold">EDUCATION</p><p class="text-black/60">BS - Information Technology Student</p></div>
+    <div class="border border-black/15 rounded-xl p-4"><p class="font-semibold">LOCATION</p><p class="text-black/60">Bunawan, Agusan del Sur, Philippines</p></div>
+    <div class="border border-black/15 rounded-xl p-4"><p class="font-semibold">HOBBIES</p><p class="text-black/60">Coding, Debugging &amp; Typing Tests</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+ <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
+  <p class="text-xs tracking-[.3em] uppercase text-white/50">Selected work</p>
+  <h2 class="mt-3 text-4xl font-extrabold tracking-tight">My Projects</h2>
+
+  <div class="mt-10 grid md:grid-cols-2 gap-6">
+
+   <!-- JAL Printing -->
+   <article class="group border border-white/15 rounded-2xl overflow-hidden flex flex-col hover:border-white/50 transition">
+    <a href="https://jal-printing-services.vercel.app" target="_blank" rel="noopener"
+       class="relative block w-full overflow-hidden bg-white/5" style="height:200px" aria-label="Open JAL Printing Services live site">
+     <img src="JALPrintingServices.jpg" alt="JAL Printing Services website" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+     <span class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition grid place-items-center text-sm font-medium">Visit site ↗</span>
+    </a>
+    <div class="p-6 flex flex-col flex-1">
+     <p class="text-xs tracking-widest uppercase text-white/50">Client website · Live</p>
+     <h3 class="mt-2 text-xl font-bold">JAL Printing Services</h3>
+     <p class="mt-2 text-sm text-white/70">Business website for a print shop in San Teodoro, Bunawan, Agusan del Sur, with a reviews and feedback section that updates from a Google Sheet, so no code edits are needed.</p>
+     <div class="mt-4 flex flex-wrap gap-2 text-xs">
+      <span class="border border-white/20 rounded-full px-3 py-1">Services &amp; Pricing</span>
+      <span class="border border-white/20 rounded-full px-3 py-1">Artwork Upload</span>
+      <span class="border border-white/20 rounded-full px-3 py-1">Live Reviews</span>
+      <span class="border border-white/20 rounded-full px-3 py-1">Messenger Chat</span>
+     </div>
+     <p class="mt-4 text-xs text-white/50">HTML · CSS · JavaScript · GitHub</p>
+     <div class="mt-auto pt-5 flex flex-wrap gap-3 text-sm">
+      <a href="https://jal-printing-services.vercel.app" target="_blank" rel="noopener"
+         class="bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-white/80">Live Site ↗</a>
+      <a href="https://github.com/jusbyutlang-57-hub/JAL-Printing-Services" target="_blank" rel="noopener"
+         class="border border-white/30 px-5 py-2 rounded-full hover:bg-white hover:text-black">GitHub Code</a>
+     </div>
+    </div>
+   </article>
+
+   <!-- GCash Manager -->
+   <article class="group border border-white/15 rounded-2xl overflow-hidden flex flex-col hover:border-white/50 transition">
+    <a href="https://github.com/jusbyutlang-57-hub" target="_blank" rel="noopener"
+       class="relative block w-full overflow-hidden bg-white/5" style="height:200px" aria-label="Open GCash Transaction Record Manager on GitHub">
+     <img src="GCASHTransactionRecordManager.jpg" alt="GCash Transaction Record Manager" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+     <span class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition grid place-items-center text-sm font-medium">View on GitHub →</span>
+    </a>
+    <div class="p-6 flex flex-col flex-1">
+     <p class="text-xs tracking-widest uppercase text-white/50">Software</p>
+     <h3 class="mt-2 text-xl font-bold">GCash Transaction Record Manager</h3>
+     <p class="mt-2 text-sm text-white/70">Tracks GCash cash-in, cash-out and transfer fees in one place, with a live dashboard of totals, daily summaries, searchable records and CSV import/export.</p>
+     <div class="mt-4 flex flex-wrap gap-2 text-xs">
+      <span class="border border-white/20 rounded-full px-3 py-1">Daily summary</span>
+      <span class="border border-white/20 rounded-full px-3 py-1">Fee tracking</span>
+      <span class="border border-white/20 rounded-full px-3 py-1">Search &amp; filter</span>
+      <span class="border border-white/20 rounded-full px-3 py-1">CSV import / export</span>
+     </div>
+     <p class="mt-4 text-xs text-white/50">Python · Logic · GitHub</p>
+     <div class="mt-auto pt-5 flex flex-wrap gap-3 text-sm">
+      <a href="https://github.com/jusbyutlang-57-hub" target="_blank" rel="noopener"
+         class="bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-white/80">See on GitHub →</a>
+     </div>
+    </div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<!-- SKILLS (white) -->
+<section id="skills" class="bg-white text-black">
+ <div class="max-w-6xl mx-auto px-5 py-16 md:py-24">
+  <p class="text-xs tracking-[.3em] uppercase text-black/50">What I Do</p>
+  <h2 class="mt-3 text-4xl font-extrabold tracking-tight">Skills &amp; Services</h2>
+
+  <div class="mt-12 grid md:grid-cols-2 gap-12">
+
+   <!-- Technical Skills -->
+   <div>
+    <h3 class="font-semibold mb-5">Technical Skills</h3>
+    <div class="space-y-4">
+
+     <div>
+      <div class="flex justify-between text-sm mb-1"><span>HTML / CSS</span><span class="text-black/50">85%</span></div>
+      <div class="h-2 bg-black/10 rounded-full"><div class="h-2 bg-black rounded-full" style="width:85%"></div></div>
+     </div>
+
+     <div>
+      <div class="flex justify-between text-sm mb-1"><span>Python</span><span class="text-black/50">70%</span></div>
+      <div class="h-2 bg-black/10 rounded-full"><div class="h-2 bg-black rounded-full" style="width:70%"></div></div>
+     </div>
+
+     <div>
+      <div class="flex justify-between text-sm mb-1"><span>Tailwind CSS</span><span class="text-black/50">75%</span></div>
+      <div class="h-2 bg-black/10 rounded-full"><div class="h-2 bg-black rounded-full" style="width:75%"></div></div>
+     </div>
+
+     <div>
+      <div class="flex justify-between text-sm mb-1"><span>JavaScript</span><span class="text-black/50">80%</span></div>
+      <div class="h-2 bg-black/10 rounded-full"><div class="h-2 bg-black rounded-full" style="width:80%"></div></div>
+     </div>
+
+     <div>
+      <div class="flex justify-between text-sm mb-1"><span>Java</span><span class="text-black/50">65%</span></div>
+      <div class="h-2 bg-black/10 rounded-full"><div class="h-2 bg-black rounded-full" style="width:65%"></div></div>
+     </div>
+
+     <div>
+      <div class="flex justify-between text-sm mb-1"><span>Git &amp; GitHub</span><span class="text-black/50">70%</span></div>
+      <div class="h-2 bg-black/10 rounded-full"><div class="h-2 bg-black rounded-full" style="width:70%"></div></div>
+     </div>
+
+    </div>
+   </div>
+
+   <!-- Services -->
+   <div>
+    <h3 class="font-semibold mb-5">Services</h3>
+    <ul class="space-y-3">
+     <li class="border border-black/15 rounded-xl p-4"><b>Website Development</b><br><span class="text-black/60 text-sm">Responsive business sites and landing pages.</span></li>
+     <li class="border border-black/15 rounded-xl p-4"><b>Software Prototypes</b><br><span class="text-black/60 text-sm">Python and Java applications built on solid data structures.</span></li>
+     <li class="border border-black/15 rounded-xl p-4"><b>Website Updates &amp; Maintenance</b><br><span class="text-black/60 text-sm">Content changes, fixes and small feature additions.</span></li>
+    </ul>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- CV -->
+<section id="cv">
+ <div class="max-w-4xl mx-auto px-5 py-24">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+   <div><p class="text-xs tracking-[.3em] uppercase text-white/50">Resume</p><h2 class="mt-3 text-4xl font-extrabold tracking-tight">CV / Resume</h2></div>
+   <a href="RESUME%20-%20JUSBY%20LIM%20UTLANG.pdf" target="_blank" rel="noopener"
+      class="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/80">VIEW FULL RESUME (PDF)</a>
+  </div>
+
+  <div class="mt-10 border border-white/15 rounded-2x1 p-5 sm:p-8 space-y-8">
+   <div>
+    <h3 class="text-xs tracking-[.3em] uppercase text-white/50 mb-4">Education</h3>
+    <div class="flex flex-wrap justify-between gap-2">
+     <div><p class="font-semibold">Bachelor of Science in Information Technology</p><p class="text-white/60">Agusan del Sur State University, Bunawan, Agusan del Sur</p></div>
+     <p class="text-white/50">2025 - Present</p>
+    </div>
+   </div>
+   <div>
+    <h3 class="text-xs tracking-[.3em] uppercase text-white/50 mb-4">Experience</h3>
+    <div class="flex flex-wrap justify-between gap-2">
+     <div><p class="font-semibold">Freelance Web Developer</p><p class="text-white/60">Designed and built the business website</p></div>
+     <p class="text-white/50">2025 - Present</p>
+    </div>
+    <div class="flex flex-wrap justify-between gap-2 mt-5">
+     <div><p class="font-semibold">Freelance Software Developer</p><p class="text-white/60">Build applications, handles databases</p></div>
+     <p class="text-white/50">2025 - Present</p>
+    </div>
+    <div class="flex flex-wrap justify-between gap-2 mt-5">
+     <div><p class="font-semibold">Freelance Typist</p><p class="text-white/60">Converts handwritten notes, printed documents and raw data into digital formats</p></div>
+     <p class="text-white/50">2015 - Present</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT (white) -->
+<section id="contact" class="bg-white text-black">
+ <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-14">
+  <div>
+   <p class="text-xs tracking-[.3em] uppercase text-black/50">Contact Me</p>
+   <h2 class="mt-3 text-4xl font-extrabold tracking-tight">Let’s Work Together.</h2>
+   <p class="mt-5 text-black/70">Have a project in mind? Send a message or reach out on any platform below.</p>
+   <ul class="mt-8 space-y-3 text-lg">
+    <li><a class="underline underline-offset-4" href="mailto:jusbylim@gmail.com">jusbylim@gmail.com</a></li>
+    <li><a class="underline underline-offset-4" href="tel:+639928891629">+63 992 889 1629</a></li>
+   </ul>
+   <div class="mt-8 flex flex-wrap gap-3 text-sm">
+    <a class="border border-black px-5 py-2 rounded-full hover:bg-black hover:text-white" target="_blank" rel="noopener" href="https://github.com/jusbyutlang-57-hub">GitHub</a>
+    <a class="border border-black px-5 py-2 rounded-full hover:bg-black hover:text-white" target="_blank" rel="noopener" href="https://www.linkedin.com/in/jusby-lim-utlang-b6678a444/">LinkedIn</a>
+    <a class="border border-black px-5 py-2 rounded-full hover:bg-black hover:text-white" target="_blank" rel="noopener" href="https://www.facebook.com/jusby.utlang.2024/">Facebook</a>
+   </div>
+  </div>
+
+  <form id="cf" action="https://formspree.io/f/mqppvegv" method="POST" class="space-y-4">
+   <div><label class="text-sm font-medium" for="n">Your Name</label>
+    <input id="n" name="name" required class="mt-1 w-full border border-black/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black bg-white"></div>
+   <div><label class="text-sm font-medium" for="e">Your Email</label>
+    <input id="e" name="email" type="email" required class="mt-1 w-full border border-black/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black bg-white"></div>
+   <div><label class="text-sm font-medium" for="m">Message</label>
+    <textarea id="m" name="message" rows="5" required class="mt-1 w-full border border-black/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black bg-white"></textarea></div>
+   <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off"> <!-- spam trap -->
+   <button type="submit" class="w-full bg-black text-white py-3.5 rounded-full font-medium hover:bg-black/80">Send Message</button>
+   <p id="st" class="text-sm text-black/60" aria-live="polite"></p>
+  </form>
+ </div>
+</section>
+
+<footer class="border-t border-white/10 py-8 text-center text-sm text-white/40">© <span id="yr"></span> Jusby Lim Utlang. All Rights Reserved.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
