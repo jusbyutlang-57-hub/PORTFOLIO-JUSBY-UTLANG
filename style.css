@@ -12,17 +12,55 @@ html {
 body {
   background: #000;
   color: #fff;
+  overflow-x: hidden;
 }
 
-@keyframes rise {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: none; }
+/* Soft radial vignette behind hero typography so the 3D scene stays crisp without reducing text contrast */
+.hero-vignette {
+  background: radial-gradient(
+    circle at 28% 48%,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.35) 48%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
 }
-.rise { display: inline-block; opacity: 0; animation: rise .7s ease forwards; }
-.d1 { animation-delay: .50s; }
-.d2 { animation-delay: .50s; }
-.d3 { animation-delay: .80s; }
+
+/* Cursor-reactive monochrome spotlight on dark cards */
+.spotlight-card {
+  position: relative;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    550px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.09),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Active navigation indicator */
+.nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .rise { animation: none; opacity: 1; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
