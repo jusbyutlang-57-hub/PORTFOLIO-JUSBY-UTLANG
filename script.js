@@ -673,6 +673,39 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !pref
 
     renderer.render(scene, camera);
   }
+  
+  // 9. Screenshot Lightbox Preview
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
 
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.add('hidden');
+  lightbox.classList.remove('flex');
+  lightboxImg.src = '';
+}
+
+document.querySelectorAll('[data-lightbox]').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    lightboxImg.src = trigger.dataset.lightbox;
+    lightboxImg.alt = trigger.dataset.caption || 'Achievement Screenshot';
+    lightboxCaption.textContent = trigger.dataset.caption || '';
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+  });
+});
+
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightbox) {
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+}
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+  
   animate();
 })();
